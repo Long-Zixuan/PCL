@@ -194,7 +194,8 @@ Public Class Settings
         New Setting("VersionServerNide", "", Source:=Sources.Instance),
         New Setting("VersionServerAuthRegister", "", Source:=Sources.Instance),
         New Setting("VersionServerAuthName", "", Source:=Sources.Instance),
-        New Setting("VersionServerAuthServer", "", Source:=Sources.Instance)
+        New Setting("VersionServerAuthServer", "", Source:=Sources.Instance),
+        New Setting("ShowLZXEditionMsg", True)
     }).ToDictionary(Function(e) e.Key)
 
     Public Enum Sources
