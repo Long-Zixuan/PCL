@@ -7,11 +7,11 @@ Friend Module ModSecret
     '在开源版的注册表与常规版的注册表隔离，以防数据冲突
     Public Const RegFolder As String = "PCLDebug"
     '用于微软登录的 ClientId
-    Public OAuthClientId As String = "fe72edc2-3a6f-4280-90e8-e2beb64ce7e1"
+    Public OAuthClientId As String = "fe72edc2-3a6f-4280-90e8-e2beb64ce7e1" 'Client ID通过逆编译PCL发行版得来
     'CurseForge API Key
-    Public CurseForgeAPIKey As String = "JDJhJDEwJDdXV1YxV0VMY3dYOFhwN2Q2OE1Icy41Z3JUeVpWYTZTeW55ZVN5TWgxcnNFODluSWEwOXpP"
+    Public CurseForgeAPIKey As String = Encoding.[Default].GetString(Convert.FromBase64String("JDJhJDEwJDdXV1YxV0VMY3dYOFhwN2Q2OE1Icy41Z3JUeVpWYTZTeW55ZVN5TWgxcnNFODluSWEwOXpP")) 'Curseforge API通过逆编译PCL发行版得来
     '用于匿名数据收集的腾讯云日志服务上报 URL，形如 https://{region}.cls.tencentcs.com/track?topic_id={topic_id}
-    Public Const ClsBaseUrl As String = "https://ap-shanghai.cls.tencentcs.com/track?topic_id=pcl-remote-1253424809"
+    Public Const ClsBaseUrl As String = "https://ap-shanghai.cls.tencentcs.com/track?topic_id=pcl-remote-1253424809" '上报URL通过逆编译PCL发行版得来
 
 #Region "网络鉴权"
 
